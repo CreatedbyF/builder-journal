@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+/* 🔧 Override general button style for logout only */
+#logoutBtn {
+  display: inline-block;
+  background: #888 !important;
+  font-size: 0.9em;
+  padding: 6px 16px;
+  border-radius: 6px;
+  box-shadow: none;
+  width: auto !important;
+  max-width: none !important;
+  margin: 10px 0; /* update margin to remove auto-centering */
+}
+
+
+/* ✅ General button hover effect */
+button:hover {
+  background-color: #222;
+}
+
+/* 🎯 Optional: specific hover for logout if you want a different effect */
+#logoutBtn:hover {
+  background-color: #666 !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: break-word;
+  gap: 10px;
+}
+
+/* 🔁 Make buttons group align vertically */
+li > div.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* ----------------- UI POLISH ADDITIONS ----------------- */
+
+/* Smooth focus border for input fields */
+input, textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #444;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
