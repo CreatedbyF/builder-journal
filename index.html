@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Builder Journal</title>
+
+<style>
+  body {
+    font-family: sans-serif;
+    background: #f6f6f6;
+    padding: 2em;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  #auth-section, #logoutBtn, #entryInput, #saveBtn {
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  input, textarea, button {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    cursor: pointer;
+    background: #222;
+    color: #fff;
+    border: none;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #444;
+  }
+
+  #entriesList {
+    list-style: none;
+    padding: 0;
+    margin-top: 2em;
+  }
+
+  #entriesList li {
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #entriesList button {
+    margin-left: 10px;
+    font-size: 0.9em;
+  }
+  
+  /* 🧱 Button alignment fix */
+
+}
+
+/* Group the buttons cleanly */
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+</style>
+
+</head>
+<body>
+
+  <h1>Builder Journal</h1>
+
+  <div id="auth-section">
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+ <div style="text-align: center;">
+   <button id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+ </div>
+
+
+  <textarea id="entryInput" placeholder="Write your journal entry..."></textarea>
+  <button id="saveBtn" onclick="saveEntry()" disabled>Save Entry</button>
+
+  <ul id="entriesList"></ul>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+  <!-- Your main logic -->
+  <script src="main.js"></script>
+
+</body>
+</html>
