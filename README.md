@@ -6,7 +6,9 @@ A minimalist journaling web app built using **Firebase** (Firestore + Auth) and 
 👉 [builderjournal-243dc.web.app](https://builderjournal-243dc.web.app)
 
 ## 🖼️ Preview  
-![Builder Journal Screenshot](./screenshot.png)
+
+![image](https://github.com/user-attachments/assets/c580c768-9921-42d1-ac7e-7dddd63fec34)
+
 
 ---
 
